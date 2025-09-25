@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="HelloWorldTest2\**" />
+    <Compile Remove="HelloWorldTest\**" />
     <Content Remove="HelloWorldTest2\**" />
+    <Content Remove="HelloWorldTest\**" />
     <EmbeddedResource Remove="HelloWorldTest2\**" />
+    <EmbeddedResource Remove="HelloWorldTest\**" />
     <None Remove="HelloWorldTest2\**" />
+    <None Remove="HelloWorldTest\**" />
   </ItemGroup>
 
   <ItemGroup>

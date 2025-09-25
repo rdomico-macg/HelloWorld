@@ -1,7 +1,7 @@
 ﻿
 using HelloWorld;
 
-namespace HelloWorldTest2
+namespace HelloWorldTest
 {
     [TestClass]
     public sealed class WeatherForecastTests
