@@ -1,6 +1,7 @@
-﻿using HelloWorld;
+﻿
+using HelloWorld;
 
-namespace HelloWorldTest
+namespace HelloWorldTest2
 {
     [TestClass]
     public sealed class WeatherForecastTests
@@ -10,10 +11,10 @@ namespace HelloWorldTest
         {
             // Arrange
             var weatherForecast = new WeatherForecast { TemperatureC = 0 };
-            
+
             // Act
             var result = weatherForecast.TemperatureF;
-            
+
             // Assert
             Assert.AreEqual(32, result);
         }
@@ -23,10 +24,10 @@ namespace HelloWorldTest
         {
             // Arrange
             var weatherForecast = new WeatherForecast { TemperatureC = 100 };
-            
+
             // Act
             var result = weatherForecast.TemperatureF;
-            
+
             // Assert
             Assert.AreEqual(211, result);
         }
@@ -36,10 +37,10 @@ namespace HelloWorldTest
         {
             // Arrange
             var weatherForecast = new WeatherForecast { TemperatureC = -20 };
-            
+
             // Act
             var result = weatherForecast.TemperatureF;
-            
+
             // Assert
             Assert.AreEqual(-3, result);
         }
@@ -49,10 +50,10 @@ namespace HelloWorldTest
         {
             // Arrange
             var weatherForecast = new WeatherForecast { TemperatureC = 25 };
-            
+
             // Act
             var result = weatherForecast.TemperatureF;
-            
+
             // Assert
             Assert.AreEqual(76, result);
         }
@@ -62,10 +63,10 @@ namespace HelloWorldTest
         {
             // Arrange
             var weatherForecast = new WeatherForecast { TemperatureC = -40 };
-            
+
             // Act
             var result = weatherForecast.TemperatureF;
-            
+
             // Assert
             Assert.AreEqual(-39, result);
         }
@@ -83,12 +84,12 @@ namespace HelloWorldTest
         {
             // Arrange
             var weatherForecast = new WeatherForecast { TemperatureC = celsius };
-            
+
             // Act
             var result = weatherForecast.TemperatureF;
-            
+
             // Assert
-            Assert.AreEqual(expectedFahrenheit, result, 
+            Assert.AreEqual(expectedFahrenheit, result,
                 $"Failed for {celsius}°C. Expected: {expectedFahrenheit}°F, Actual: {result}°F");
         }
 
@@ -97,11 +98,11 @@ namespace HelloWorldTest
         {
             // Arrange - Test the specific formula: 32 + (int)(TemperatureC / 0.5556)
             var weatherForecast = new WeatherForecast { TemperatureC = 20 };
-            
+
             // Act
             var result = weatherForecast.TemperatureF;
             var expectedResult = 32 + (int)(20 / 0.5556);
-            
+
             // Assert
             Assert.AreEqual(expectedResult, result);
             Assert.AreEqual(67, result); // 20°C should give 67°F with this formula

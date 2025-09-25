@@ -13,11 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+    <ProjectReference Include="..\HelloWorld.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj" />
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
 </Project>
